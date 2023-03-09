@@ -20,110 +20,72 @@
         <button id="suma" onclick="restar()">Resta</button><br>
         <button id="suma" onclick="multiplicar()">Multiplicacion</button>
         <button id="suma" onclick="dividir()">Division</button><br>
-        <button id="suma" onclick="raiz()">Raiz cuadrada</button>
+        <button id="suma" onclick="raiz()">Elevado</button>
     </div>
     <h1>Resultado:</h1>
     <input id="resultado" disabled>
 
     <script>
-        // console.log("prueba");
-        function sumar() {
-            const sumeroA = parseFloat(document.getElementById("numA").value);
-            const sumeroB = parseFloat(document.getElementById("numB").value);
-            let camporesultado = document.getElementById("resultado");
+        var sumeroA, sumeroB;
+        let camporesultado = document.getElementById("resultado");
+        function capturarDatos() {
+            sumeroA = parseFloat(document.getElementById("numA").value);
+            sumeroB = parseFloat(document.getElementById("numB").value);
+            return sumeroA, sumeroB, camporesultado;
+        }
+        function validacionCampos() {
             if (isNaN(sumeroA) || isNaN(sumeroB)) {
-                // console.log("Los campos estan vacios");
                 camporesultado.value = "ingrese los datos";
                 if (isNaN(sumeroA) && !isNaN(sumeroB)) {
                     alert("el campo A esta vacio");
                 } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
                     alert("el campo B esta vacio");
+
                 } else {
                     alert("Ambos campos vacios");
                 }
-            } else if (sumeroA && sumeroB) {
+            }
+        }
+        function sumar() {
+            capturarDatos();
+            validacionCampos();
+            if (!(isNaN(sumeroA) || isNaN(sumeroB))) {
                 const result = sumeroA + sumeroB;
                 camporesultado.value = result;
             }
         }
         function restar() {
-            const sumeroA = parseFloat(document.getElementById("numA").value);
-            const sumeroB = parseFloat(document.getElementById("numB").value);
-            let camporesultado = document.getElementById("resultado");
-            if (isNaN(sumeroA) || isNaN(sumeroB)) {
-                // console.log("Los campos estan vacios");
-                camporesultado.value = "ingrese los datos";
-                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
-                    alert("el campo A esta vacio");
-                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
-                    alert("el campo B esta vacio");
-                } else {
-                    alert("Ambos campos vacios");
-                }
-            } else if (sumeroA && sumeroB) {
+            capturarDatos();
+            validacionCampos();
+            if (!(isNaN(sumeroA) || isNaN(sumeroB))) {
                 const result = sumeroA - sumeroB;
                 camporesultado.value = result;
             }
         }
         function multiplicar() {
-            const sumeroA = parseFloat(document.getElementById("numA").value);
-            const sumeroB = parseFloat(document.getElementById("numB").value);
-            let camporesultado = document.getElementById("resultado");
-            if (isNaN(sumeroA) || isNaN(sumeroB)) {
-                // console.log("Los campos estan vacios");
-                camporesultado.value = "ingrese los datos";
-                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
-                    alert("el campo A esta vacio");
-                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
-                    alert("el campo B esta vacio");
-                } else {
-                    alert("Ambos campos vacios");
-                }
-            } else if (sumeroA && sumeroB) {
+            capturarDatos();
+            validacionCampos();
+            if (!(isNaN(sumeroA) || isNaN(sumeroB))) {
                 const result = sumeroA * sumeroB;
                 camporesultado.value = result;
             }
         }
         function dividir() {
-            const sumeroA = parseFloat(document.getElementById("numA").value);
-            const sumeroB = parseFloat(document.getElementById("numB").value);
-            let camporesultado = document.getElementById("resultado");
-            if (isNaN(sumeroA) || isNaN(sumeroB)) {
-                // console.log("Los campos estan vacios");
-                camporesultado.value = "ingrese los datos";
-                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
-                    alert("el campo A esta vacio");
-                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
-                    alert("el campo B esta vacio");
-                } else {
-                    alert("Ambos campos vacios");
-                }
-            } else if (sumeroA && sumeroB) {
+            capturarDatos();
+            validacionCampos();
+            if (!(isNaN(sumeroA) || isNaN(sumeroB))) {
                 const result = sumeroA / sumeroB;
                 camporesultado.value = result;
             }
         }
         function raiz() {
-            const sumeroA = parseFloat(document.getElementById("numA").value);
-            const sumeroB = parseFloat(document.getElementById("numB").value);
-            let camporesultado = document.getElementById("resultado");
-            if (isNaN(sumeroA) || isNaN(sumeroB)) {
-                // console.log("Los campos estan vacios");
-                camporesultado.value = "ingrese los datos";
-                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
-                    alert("el campo A esta vacio");
-                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
-                    alert("el campo B esta vacio");
-                } else {
-                    alert("Ambos campos vacios");
-                }
-            } else if (sumeroA && sumeroB) {
+            capturarDatos();
+            validacionCampos();
+            if (!(isNaN(sumeroA) || isNaN(sumeroB))) {
                 const result = Math.pow(sumeroA, sumeroB);
                 camporesultado.value = result;
             }
         }
-
-        //Modificar codigo para crear funciones para capturar datos y otra para validar si tiene datos o no 
     </script>
 </body>
 
