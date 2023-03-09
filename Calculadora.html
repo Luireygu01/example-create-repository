@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <p>Numero uno:</p>
+    <input id="numA" type="number">
+    <p>Numero dos:</p>
+    <input id="numB" type="number">
+    <br><br>
+    <div style="width:170px; height:70px; overflow:auto;background-color: gray;border:3px solid black;">
+        <button id="suma" onclick="sumar()">suma</button>
+        <button id="suma" onclick="restar()">Resta</button><br>
+        <button id="suma" onclick="multiplicar()">Multiplicacion</button>
+        <button id="suma" onclick="dividir()">Division</button><br>
+        <button id="suma" onclick="raiz()">Raiz cuadrada</button>
+    </div>
+    <h1>Resultado:</h1>
+    <input id="resultado" disabled>
+
+    <script>
+        // console.log("prueba");
+        function sumar() {
+            const sumeroA = parseFloat(document.getElementById("numA").value);
+            const sumeroB = parseFloat(document.getElementById("numB").value);
+            let camporesultado = document.getElementById("resultado");
+            if (isNaN(sumeroA) || isNaN(sumeroB)) {
+                // console.log("Los campos estan vacios");
+                camporesultado.value = "ingrese los datos";
+                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
+                    alert("el campo A esta vacio");
+                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
+                    alert("el campo B esta vacio");
+                } else {
+                    alert("Ambos campos vacios");
+                }
+            } else if (sumeroA && sumeroB) {
+                const result = sumeroA + sumeroB;
+                camporesultado.value = result;
+            }
+        }
+        function restar() {
+            const sumeroA = parseFloat(document.getElementById("numA").value);
+            const sumeroB = parseFloat(document.getElementById("numB").value);
+            let camporesultado = document.getElementById("resultado");
+            if (isNaN(sumeroA) || isNaN(sumeroB)) {
+                // console.log("Los campos estan vacios");
+                camporesultado.value = "ingrese los datos";
+                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
+                    alert("el campo A esta vacio");
+                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
+                    alert("el campo B esta vacio");
+                } else {
+                    alert("Ambos campos vacios");
+                }
+            } else if (sumeroA && sumeroB) {
+                const result = sumeroA - sumeroB;
+                camporesultado.value = result;
+            }
+        }
+        function multiplicar() {
+            const sumeroA = parseFloat(document.getElementById("numA").value);
+            const sumeroB = parseFloat(document.getElementById("numB").value);
+            let camporesultado = document.getElementById("resultado");
+            if (isNaN(sumeroA) || isNaN(sumeroB)) {
+                // console.log("Los campos estan vacios");
+                camporesultado.value = "ingrese los datos";
+                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
+                    alert("el campo A esta vacio");
+                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
+                    alert("el campo B esta vacio");
+                } else {
+                    alert("Ambos campos vacios");
+                }
+            } else if (sumeroA && sumeroB) {
+                const result = sumeroA * sumeroB;
+                camporesultado.value = result;
+            }
+        }
+        function dividir() {
+            const sumeroA = parseFloat(document.getElementById("numA").value);
+            const sumeroB = parseFloat(document.getElementById("numB").value);
+            let camporesultado = document.getElementById("resultado");
+            if (isNaN(sumeroA) || isNaN(sumeroB)) {
+                // console.log("Los campos estan vacios");
+                camporesultado.value = "ingrese los datos";
+                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
+                    alert("el campo A esta vacio");
+                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
+                    alert("el campo B esta vacio");
+                } else {
+                    alert("Ambos campos vacios");
+                }
+            } else if (sumeroA && sumeroB) {
+                const result = sumeroA / sumeroB;
+                camporesultado.value = result;
+            }
+        }
+        function raiz() {
+            const sumeroA = parseFloat(document.getElementById("numA").value);
+            const sumeroB = parseFloat(document.getElementById("numB").value);
+            let camporesultado = document.getElementById("resultado");
+            if (isNaN(sumeroA) || isNaN(sumeroB)) {
+                // console.log("Los campos estan vacios");
+                camporesultado.value = "ingrese los datos";
+                if (isNaN(sumeroA) && !isNaN(sumeroB)) {
+                    alert("el campo A esta vacio");
+                } else if (!isNaN(sumeroA) && isNaN(sumeroB)) {
+                    alert("el campo B esta vacio");
+                } else {
+                    alert("Ambos campos vacios");
+                }
+            } else if (sumeroA && sumeroB) {
+                const result = Math.pow(sumeroA, sumeroB);
+                camporesultado.value = result;
+            }
+        }
+
+        //Modificar codigo para crear funciones para capturar datos y otra para validar si tiene datos o no 
+    </script>
+</body>
+
+</html>
