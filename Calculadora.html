@@ -9,22 +9,66 @@
 </head>
 
 <body>
-    <h1>Calculadora</h1>
-    <p>Numero uno:</p>
-    <input id="numA" type="number">
-    <p>Numero dos:</p>
-    <input id="numB" type="number">
-    <br><br>
-    <div style="width:170px; height:70px; overflow:auto;background-color: gray;border:3px solid black;">
-        <button id="suma" onclick="sumar()">suma</button>
-        <button id="suma" onclick="restar()">Resta</button><br>
-        <button id="suma" onclick="multiplicar()">Multiplicacion</button>
-        <button id="suma" onclick="dividir()">Division</button><br>
-        <button id="suma" onclick="raiz()">Elevado</button>
+    <div id="divContenidoGeneral">
+        <p style="font-size: 20px"> Calculadora </p>
+        <p>Numero uno:</p>
+        <input id="numA" type="number">
+        <p>Numero dos:</p>
+        <input id="numB" type="number">
+        <br><br>
+        <div id="divBotones">
+            <button id="suma" onclick="sumar()" style="margin-top: 5px;margin-bottom: 5px;">+</button>
+            <button id="suma" onclick="restar()">-</button>
+            <button id="suma" onclick="multiplicar()">*</button>
+            <button id="suma" onclick="dividir()">/</button>
+            <button id="suma" onclick="raiz()">n²</button>
+        </div>
+        <p style="font-size: 20px">Resultado:</p>
+        <input id="resultado" disabled><br><br>
     </div>
-    <h1>Resultado:</h1>
-    <input id="resultado" disabled>
+    <style>
+        H1 {
+            text-align: center;
+            margin: 2%;
+            overflow: auto;
+        }
 
+        #divBotones {
+            text-align: center;
+            background-color: red;
+            margin: 2%;
+            overflow: auto;
+            background-color: gray;
+            border: 3px solid black;
+        }
+
+        #divContenidoGeneral {
+            text-align: center;
+            border: 3px solid black;
+            margin-left: 35%;
+            margin-right: 35%;
+            overflow: auto;
+            margin-bottom: 1%;
+        }
+
+        #numA {
+            overflow: auto;
+            margin-left: 10px;
+
+        }
+
+        #numB {
+            overflow: auto;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+        #resultado {
+            overflow: auto;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+    </style>
     <script>
         var sumeroA, sumeroB;
         let camporesultado = document.getElementById("resultado");
