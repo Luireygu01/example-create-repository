@@ -17,7 +17,7 @@
         <input id="numB" type="number">
         <br><br>
         <div id="divBotones">
-            <button id="suma" onclick="sumar()" style="margin-top: 5px;margin-bottom: 5px;">+</button>
+            <button id="suma" onclick="sumar()">+</button>
             <button id="suma" onclick="restar()">-</button>
             <button id="suma" onclick="multiplicar()">*</button>
             <button id="suma" onclick="dividir()">/</button>
@@ -30,16 +30,21 @@
         H1 {
             text-align: center;
             margin: 2%;
-            overflow: auto;
+
+        }
+        #suma{
+            margin-top: 5px;margin-bottom: 5px;
         }
 
         #divBotones {
             text-align: center;
-            background-color: red;
-            margin: 2%;
-            overflow: auto;
-            background-color: gray;
             border: 3px solid black;
+            margin: 2%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap-reverse;
         }
 
         #divContenidoGeneral {
@@ -49,24 +54,22 @@
             margin-right: 35%;
             overflow: auto;
             margin-bottom: 1%;
+
         }
 
-        #numA {
+        input {
             overflow: auto;
             margin-left: 10px;
-
+            display: block;
+            width: 80%;
+            margin-left: 10%;
         }
 
-        #numB {
-            overflow: auto;
-            margin-left: 3%;
-            margin-right: 3%;
-        }
-
-        #resultado {
-            overflow: auto;
-            margin-left: 3%;
-            margin-right: 3%;
+        button {
+            border-radius: 100px;
+            width: 30px;
+            height: 30px;
+            background-color: #D1D1D1;
         }
     </style>
     <script>
