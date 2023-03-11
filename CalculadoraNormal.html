@@ -8,79 +8,109 @@
     <title>Document</title>
     <div id="contenido">
         <input id="mostrar">
-        <div id="numeros">
-            <button id="botonNumeros">%</button>
-            <button id="botonNumeros">CE</button>
-            <button id="botonNumeros">C</button>
-            <br>
-            <button id="botonNumeros">1/x</button>
-            <button id="botonNumeros">√2</button>
-            <button id="botonNumeros">n²</button>
-            <br>
-            <button id="botonNumeros">9</button>
-            <button id="botonNumeros">8</button>
-            <button id="botonNumeros">7</button>
-            <br>
-            <button id="botonNumeros">6</button>
-            <button id="botonNumeros">5</button>
-            <button id="botonNumeros">4</button>
-            <br>
-            <button id="botonNumeros">3</button>
-            <button id="botonNumeros">2</button>
-            <button id="botonNumeros">1</button>
-            <br>
-            <button  class="centrar">0</button>
-        </div>
         <div id="operadores">
-            <button id="botonOperadores">&laquo;</button>
-            <button id="botonOperadores">+</button>
-            <button id="botonOperadores">-</button>
-            <button id="botonOperadores">*</button>
-            <button id="botonOperadores">/</button>
-            <button id="botonOperadores">=</button>
+            <button id="botonOperadores" onclick="porcentaje()">%</button>
+            <button id="botonOperadores" onclick="unodivx()">1/x</button>
+            <button id="botonOperadores" onclick="raiz()">√2</button>
+            <button id="botonOperadores" onclick="elevadocuad()">n²</button>
+            <button id="botonOperadores" onclick="ce()">CE</button>
+            <button id="botonOperadores" onclick="suma()">+</button>
+            <button id="botonOperadores" onclick="">-</button>
+            <button id="botonOperadores" onclick="">*</button>
+            <button id="botonOperadores" onclick="">/</button>
+            <button id="botonOperadores" onclick="c()">C</button>
+
         </div>
+        <div id="numeros">
+
+            <button id="botonNumeros" onclick="nueve()">9</button>
+            <button id="botonNumeros" onclick="ocho()">8</button>
+            <button id="botonNumeros" onclick="siete()">7</button>
+            <br>
+            <button id="botonNumeros" onclick="seis()">6</button>
+            <button id="botonNumeros" onclick="cinco()">5</button>
+            <button id="botonNumeros" onclick="cuatro()">4</button>
+            <br>
+            <button id="botonNumeros" onclick="tres()">3</button>
+            <button id="botonNumeros" onclick="dos()">2</button>
+            <button id="botonNumeros" onclick="uno()">1</button>
+            <br>
+            <button id="" class="margen" onclick="">&laquo;</button>
+            <button id="botonNumeros" onclick="cero()">0</button>
+            <button id="" class="margen" onclick="">=</button>
+        </div>
+
 
     </div>
+    <script>
+        var accion, numeros, total, prueba = 1;
 
-    <style>      
+        function porcentaje() {
+            accion = "%";
+        }
+        function ce() {
+            accion = "CE";
+            console.log(accion);
+        }
+        function c() {
+            accion = "c";
+            console.log(accion);
+        }
+        function unodivx() {
+            accion = "1/x";
+            console.log(accion);
+        }
+        function raiz() {
+            accion = "√2";
+            console.log(accion);
+        }
+        function elevadocuad() {
+            accion = "n²";
+            console.log(accion);
+        }
+
+        function uno(numeros) {
+            console.log(numeros);
+        }
+        function suma(numeros) {
+            console.log(numeros);
+            numeros = 1;
+            console.log(numeros);
+            return numeros
+        }
+
+        // function suma(){
+        //     total=total+numeros;
+        //     console.log(total);
+        // }
+
+    </script>
+
+    <style>
         #contenido {
-            position: absolute;
-            flex-wrap: wrap-reverse;
-            height: auto;
-            width: auto;
+            width: 100%;
+            display: flow;
+            justify-content: center;
+            text-align: center;
             border: 3px solid gray;
-            margin: 30%;
+            width: 250px;
+            margin: auto;
+            transform: translateY(50%);
         }
 
         #mostrar {
-            display: flex;
             width: 90%;
+            height: 20px;
             margin-top: 10px;
-            margin-left: 5px;
             margin-bottom: 5px;
-        }
-
-        #operadores {
-            display: flex;
-            flex-direction: column;
-            /* justify-content: space-between; */
-            align-items: end;
-            flex-wrap: wrap-reverse;
-        }
-
-        #numeros {
-            position: absolute;
-            flex-wrap: wrap-reverse;
-            /* display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap-reverse; */
+            border-radius: 100px;
+            background-color: #dfdede;
+            border: 2px solid #6a6a6a;
         }
 
         #botonOperadores {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 100px;
             background-color: #D1D1D1;
             border: 1px solid gray;
@@ -89,20 +119,24 @@
         }
 
         #botonNumeros {
-            width: 40px;
-            height: 25px;
-            margin-top: 0.8px;
-            margin-left:4px;
-            margin-bottom: 6px;
-            border-radius: 20px;
-            border: 1px solid #817E7E;
-            background-color: #E1E1E1;
+            width: 70px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: #D1D1D1;
+            border: 1px solid gray;
+            margin-top: 5px;
+            margin-right: 5px;
+            margin-bottom: 2px;
         }
-        .centrar {
-            width: 100%;
-            margin-left:4px;
-            text-align: center;
-            margin-top: 2px;
+
+        .margen {
+            width: 70px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: #D1D1D1;
+            border: 1px solid gray;
+            margin-right: 5px;
+            margin-bottom: 2px;
         }
     </style>
 

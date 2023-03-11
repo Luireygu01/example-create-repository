@@ -15,7 +15,7 @@
         <input id="numA" type="number">
         <p>Numero dos:</p>
         <input id="numB" type="number">
-        <br><br>
+        
         <div id="divBotones">
             <button id="suma" onclick="sumar()">+</button>
             <button id="suma" onclick="restar()">-</button>
@@ -24,7 +24,7 @@
             <button id="suma" onclick="raiz()">n²</button>
         </div>
         <p style="font-size: 20px">Resultado:</p>
-        <input id="resultado" disabled><br><br>
+        <input id="resultado" disabled>
     </div>
     <style>
         H1 {
@@ -45,6 +45,7 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap-reverse;
+            margin-top: 20px;
         }
 
         #divContenidoGeneral {
@@ -55,6 +56,9 @@
             overflow: auto;
             margin-bottom: 1%;
 
+        }
+        #resultado{
+            margin-bottom: 15px;
         }
 
         input {
